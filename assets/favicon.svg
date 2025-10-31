@@ -1,50 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- Hanging wire -->
-  <line x1="64" y1="0" x2="64" y2="25" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Christmas Light Bulb Favicon -->
 
-  <!-- Metal base/socket -->
-  <rect x="56" y="25" width="16" height="8" rx="1" fill="#4B5563"/>
-  <line x1="56" y1="28" x2="72" y2="28" stroke="#6B7280" stroke-width="0.5"/>
-  <line x1="56" y1="30" x2="72" y2="30" stroke="#6B7280" stroke-width="0.5"/>
+  <!-- Socket/Base (dark gray) -->
+  <rect x="35" y="25" width="30" height="8" rx="2" fill="#374151"/>
 
-  <!-- Classic C9 bulb shape -->
-  <path
-    d="M 56 33
-       C 56 33, 52 40, 52 55
-       C 52 75, 64 85, 64 85
-       C 64 85, 76 75, 76 55
-       C 76 40, 72 33, 72 33
-       Z"
-    fill="url(#redGradient)"
-  />
+  <!-- Wire extending up -->
+  <line x1="50" y1="25" x2="50" y2="10" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
 
-  <!-- Highlight shine -->
-  <ellipse cx="58" cy="45" rx="4" ry="10" fill="white" opacity="0.5"/>
-
-  <!-- Outer glow -->
-  <path
-    d="M 56 33
-       C 56 33, 52 40, 52 55
-       C 52 75, 64 85, 64 85
-       C 64 85, 76 75, 76 55
-       C 76 40, 72 33, 72 33
-       Z"
-    fill="none"
-    stroke="#DC2626"
-    stroke-width="8"
-    opacity="0.3"
-    filter="url(#glow)"
-  />
-
+  <!-- Main bulb body (red with gradient) -->
   <defs>
-    <!-- Red glass gradient -->
-    <radialGradient id="redGradient" cx="35%" cy="30%">
-      <stop offset="0%" style="stop-color:#FCA5A5"/>
-      <stop offset="60%" style="stop-color:#DC2626"/>
-      <stop offset="100%" style="stop-color:#991B1B"/>
+    <radialGradient id="bulbGradient" cx="35%" cy="35%">
+      <stop offset="0%" style="stop-color:#FCA5A5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991B1B;stop-opacity:1" />
     </radialGradient>
 
-    <!-- Glow filter -->
+    <!-- Glow effect -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
@@ -53,4 +24,14 @@
       </feMerge>
     </filter>
   </defs>
+
+  <!-- Bulb shape (rounded bottom, tapered top) -->
+  <ellipse cx="50" cy="60" rx="20" ry="26" fill="url(#bulbGradient)" filter="url(#glow)"/>
+
+  <!-- Highlight for shine effect -->
+  <ellipse cx="42" cy="50" rx="6" ry="10" fill="rgba(255,255,255,0.4)"/>
+
+  <!-- Glow halo -->
+  <ellipse cx="50" cy="60" rx="24" ry="30" fill="none" stroke="#DC2626" stroke-width="2" opacity="0.3"/>
+  <ellipse cx="50" cy="60" rx="28" ry="34" fill="none" stroke="#DC2626" stroke-width="1" opacity="0.15"/>
 </svg>
