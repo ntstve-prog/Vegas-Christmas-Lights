@@ -9,7 +9,7 @@ This is a standalone static HTML site designed for maximum performance and conve
 ## Business Information
 
 - **Business Name:** Vegas Christmas Light Installation
-- **Phone:** (702) 527-2242
+- **Phone:** (725) 344-5333
 - **Email:** vegaschristmaslightinstall@gmail.com
 - **Service Area:** Las Vegas, Henderson, Summerlin, North Las Vegas, and surrounding Las Vegas Valley communities
 
@@ -68,8 +68,8 @@ Find this line in the `<header>` section (around line 765):
 
 ### Updating Phone Number
 Search and replace all instances of:
-- `7025272242` (in tel: links)
-- `(702) 527-2242` (displayed number)
+- `7253445333` (in tel: links)
+- `(725) 344-5333` (displayed number)
 
 ### Updating Email
 Search and replace: `vegaschristmaslightinstall@gmail.com`
