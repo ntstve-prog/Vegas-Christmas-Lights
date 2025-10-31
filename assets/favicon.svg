@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Hanging wire -->
+  <line x1="64" y1="0" x2="64" y2="25" stroke="#1F2937" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Metal base/socket -->
+  <rect x="56" y="25" width="16" height="8" rx="1" fill="#4B5563"/>
+  <line x1="56" y1="28" x2="72" y2="28" stroke="#6B7280" stroke-width="0.5"/>
+  <line x1="56" y1="30" x2="72" y2="30" stroke="#6B7280" stroke-width="0.5"/>
+
+  <!-- Classic C9 bulb shape -->
+  <path
+    d="M 56 33
+       C 56 33, 52 40, 52 55
+       C 52 75, 64 85, 64 85
+       C 64 85, 76 75, 76 55
+       C 76 40, 72 33, 72 33
+       Z"
+    fill="url(#redGradient)"
+  />
+
+  <!-- Highlight shine -->
+  <ellipse cx="58" cy="45" rx="4" ry="10" fill="white" opacity="0.5"/>
+
+  <!-- Outer glow -->
+  <path
+    d="M 56 33
+       C 56 33, 52 40, 52 55
+       C 52 75, 64 85, 64 85
+       C 64 85, 76 75, 76 55
+       C 76 40, 72 33, 72 33
+       Z"
+    fill="none"
+    stroke="#DC2626"
+    stroke-width="8"
+    opacity="0.3"
+    filter="url(#glow)"
+  />
+
+  <defs>
+    <!-- Red glass gradient -->
+    <radialGradient id="redGradient" cx="35%" cy="30%">
+      <stop offset="0%" style="stop-color:#FCA5A5"/>
+      <stop offset="60%" style="stop-color:#DC2626"/>
+      <stop offset="100%" style="stop-color:#991B1B"/>
+    </radialGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
